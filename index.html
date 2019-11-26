@@ -4,8 +4,14 @@
 	<meta charset="UTF-8">
 	<title>Hello World</title>
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
-		window.location.href = "http://www.w3schools.com";
+		$(document).ready(function(){
+			if (window.ReactNativeWebView){
+				window.ReactNativeWebView.postMessage('message test');
+				alert('postMessage executed!');
+			}
+		});
 	</script>
 </head>
 <body>
