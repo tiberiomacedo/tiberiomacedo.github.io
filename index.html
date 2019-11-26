@@ -8,7 +8,7 @@
 	<script>
 		$(document).ready(function(){
 			if (window.ReactNativeWebView){
-				window.ReactNativeWebView.postMessage(JSON.stringify({ message: 'a message test' }));
+				window.ReactNativeWebView.postMessage(JSON.stringify({message:'a message test'}));
 				alert('postMessage executed!');
 			}
 		});
