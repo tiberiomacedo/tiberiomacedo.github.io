@@ -7,7 +7,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			alert('test...');
+			alert('test!');
+			if (window.ReactNativeWebView){
+				alert('ReactNativeWebView is ok!');
+			}
 		});
 	</script>
 </head>
