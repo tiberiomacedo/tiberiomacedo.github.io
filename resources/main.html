@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Firebase Analytics Test</title>
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
-		$(document).ready(function(){
-        
-            var message = '{
-                "event": "interaction",
-                "interaction": {
-                    "component": "banner",
-                    "action": "click:button",
-                    "value": 123
-                }
-            }';
+		$(document).ready(function () {
 
+			if (window.ReactNativeWebView) {
 
-			if (window.ReactNativeWebView){
-                            
+				var objMessage = {
+					"event": "interaction",
+					"interaction": {
+						"component": "banner",
+						"action": "click:button",
+						"value": 123
+					}
+				};
+
+				var strMessage = JSON.stringify(objMessage);
+
 				window.ReactNativeWebView.postMessage(message);
-                
+
 			}
-            
+
 		});
 	</script>
 </head>
+
 <body>
 	<div>
 		<h1>Firebase Analytics Test!</h1>
 	</div>
 </body>
+
 </html>
