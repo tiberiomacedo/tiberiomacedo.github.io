@@ -9,25 +9,6 @@
 	<script>
 		$(document).ready(function () {
 
-			if (window.ReactNativeWebView) {
-
-				var objMessage = {
-					"event": "interaction",
-					"interaction": {
-						"component": "banner",
-						"action": "click:button",
-						"value": 123
-					}
-				};
-
-				var strMessage = JSON.stringify(objMessage);
-
-				console.log(strMessage);
-
-				window.ReactNativeWebView.postMessage(strMessage);
-
-			}
-
 			$("#interaction").click(function () {
 
 				if (window.ReactNativeWebView) {
