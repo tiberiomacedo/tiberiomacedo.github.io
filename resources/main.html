@@ -8,17 +8,18 @@
 	<script>
 		$(document).ready(function(){
         
+            var message = '{
+                "event": "interaction",
+                "interaction": {
+                    "component": "banner",
+                    "action": "click:button",
+                    "value": 123
+                }
+            }';
+
+
 			if (window.ReactNativeWebView){
-            
-                var message = '{
-                    "event": "interaction",
-                    "interaction": {
-                        "component": "banner",
-                        "action": "click:button",
-                        "value": 123
-                    }
-                }';
-                
+                            
 				window.ReactNativeWebView.postMessage(message);
                 
 			}
