@@ -28,6 +28,76 @@
 
 			}
 
+			$("#interaction").click(function () {
+
+				if (window.ReactNativeWebView) {
+
+					var objMessage = {
+						"event": "interaction",
+						"interaction": {
+							"component": "banner",
+							"action": "click:button",
+							"value": 123
+						}
+					};
+
+					var strMessage = JSON.stringify(objMessage);
+
+					console.log(strMessage);
+
+					window.ReactNativeWebView.postMessage(strMessage);
+
+				} else {
+
+					alert("Is not a webview!");
+
+				}
+
+			});
+
+			$("#purchase").click(function () {
+
+				$("#interaction").click(function () {
+
+					if (window.ReactNativeWebView) {
+
+						var objMessage = {
+							"event": "purchase",
+							"ecommerce": {
+								"actionField": {
+									"transactionID": "12345",
+									"value": 12.50,
+								},
+								"products": [
+									{
+										"sku": "ABC123",
+										"name": "produto1",
+										"price": 1.99,
+									},
+									{
+										"sku": "QWE987",
+										"name": "produto2",
+										"price": 10,
+									}
+								]
+							}
+						};
+
+						var strMessage = JSON.stringify(objMessage);
+
+						console.log(strMessage);
+
+						window.ReactNativeWebView.postMessage(strMessage);
+
+					} else {
+
+						alert("Is not a webview!");
+
+					}
+
+				});
+
+			});
 		});
 	</script>
 </head>
@@ -35,6 +105,8 @@
 <body>
 	<div>
 		<h1>Firebase Analytics Test!</h1>
+		<button type="button" id="interaction">Interaction Event Test</button>
+		<button type="button" id="purchase">Purchase Event Test</button>
 	</div>
 </body>
 
