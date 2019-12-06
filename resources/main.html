@@ -7,38 +7,36 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
-		$(document).ready(function () {
-
-			$("#interaction").click(function () {
-
-				if (window.ReactNativeWebView) {
-
-					var objMessage = {
-						"event": "interaction",
-						"interaction": {
-							"component": "banner",
-							"action": "click:button",
-							"value": 123
-						}
-					};
-
-					var strMessage = JSON.stringify(objMessage);
-
-					console.log(strMessage);
-
-					window.ReactNativeWebView.postMessage(strMessage);
-
-				} else {
-
-					alert("Is not a webview!");
-
-				}
-
-			});
-
-			$("#purchase").click(function () {
+			$(document).ready(function () {
 
 				$("#interaction").click(function () {
+
+					if (window.ReactNativeWebView) {
+
+						var objMessage = {
+							"event": "interaction",
+							"interaction": {
+								"component": "banner",
+								"action": "click:button",
+								"value": 123
+							}
+						};
+
+						var strMessage = JSON.stringify(objMessage);
+
+						console.log(strMessage);
+
+						window.ReactNativeWebView.postMessage(strMessage);
+
+					} else {
+
+						alert("Is not a webview!");
+
+					}
+
+				});
+
+				$("#purchase").click(function () {
 
 					if (window.ReactNativeWebView) {
 
@@ -79,7 +77,6 @@
 				});
 
 			});
-		});
 	</script>
 </head>
 
