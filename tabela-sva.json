@@ -1,12 +1,12 @@
 {
-  '70682': [
+  "70682": [
     {
-      'icon': 'amazonPrime',
-      'appName': 'Amazon Prime Video',
-      'description': 'Com o Amazon Prime Video você pode assistir a milhares de filmes e séries quando e onde quiser. Estão disponíveis produções originais da Amazon, filmes sucessos de bilheteria, séries famosas e exclusivas para acessar em até 3 dispositivos simultâneos, com o primeiro mês grátis.',
-      'howToUse': 'Acesse www.vivo.com.br/primevideo preencha seu e-mail e aguarde a confirmação. Valide sua assinatura no site www.vivo.com.br/loginamazonprimevideo informando seu CPF cadastrado na Vivo, crie sua conta no Amazon Prime Video e acesse a plataforma direto seu computador, celular, smartv, tablet ou console de games.',
-      'androidLink': 'com.amazon.avod.thirdpartyclient',
-      'iosLink': 'id545519333'
+      "icon": "amazonPrime",
+      "appName": "Amazon Prime Video",
+      "description": "Com o Amazon Prime Video você pode assistir a milhares de filmes e séries quando e onde quiser. Estão disponíveis produções originais da Amazon, filmes sucessos de bilheteria, séries famosas e exclusivas para acessar em até 3 dispositivos simultâneos, com o primeiro mês grátis.",
+      "howToUse": "Acesse www.vivo.com.br/primevideo preencha seu e-mail e aguarde a confirmação. Valide sua assinatura no site www.vivo.com.br/loginamazonprimevideo informando seu CPF cadastrado na Vivo, crie sua conta no Amazon Prime Video e acesse a plataforma direto seu computador, celular, smartv, tablet ou console de games.",
+      "androidLink": "com.amazon.avod.thirdpartyclient",
+      "iosLink": "id545519333"
     }
   ]
 }
